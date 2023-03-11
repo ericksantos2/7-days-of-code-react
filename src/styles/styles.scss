@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat&display=swap');
+@import './variaveis';
+
+body {
+  font-family: $fonte-1;
+  color: #202020;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+// nome da outra fonte: Elsie Swash Caps, font-weight é 900

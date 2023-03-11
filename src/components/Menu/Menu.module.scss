@@ -1,0 +1,18 @@
+@import '@/styles/variaveis';
+
+.cabecalho {
+  display: flex;
+  align-items: flex-end;
+  padding: $margem-vertical $margem;
+  justify-content: space-between;
+  &__links {
+    display: flex;
+    gap: 13px;
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
+
+.separador::before {
+  content: '/'
+}

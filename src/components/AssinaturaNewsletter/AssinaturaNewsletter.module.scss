@@ -1,0 +1,61 @@
+@import '@/styles/variaveis';
+
+.assinatura {
+  padding: 0 $margem;
+  &__texto {
+    line-height: 26px;
+    max-width: 481px;
+    opacity: 0.5;
+    margin-bottom: 37px;
+    &__casa {
+      font-size: 22px;
+      opacity: 0.5;
+      line-height: 27px;
+      margin-bottom: 12px;
+    }
+    &__melhores {
+      font-family: $fonte-2;
+      font-weight: 900;
+      font-size: 82px;
+      max-width: 375px;
+      line-height: 94px;
+      margin-bottom: 24px;
+    }
+  }
+  &__input {
+    display: flex;
+    position: relative;
+    width: 585px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    &__email {
+      position: absolute;
+      left: 17.43px;
+      height: 100%;
+    }
+    &__campo {
+      border: none;
+      width: 358px;
+      font-family: $fonte-1;
+      padding: 27px 358px 27px 55px;
+      line-height: 20px;
+      opacity: 0.3;
+      font-size: 16px;
+    }
+    &__botao {
+      font-family: $fonte-1;
+      position: absolute;
+      right: 0;
+      border: none;
+      padding: none;
+      height: 100%;
+      width: 194px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: #FFCB47;
+    }
+    &__botao:hover {
+      cursor: pointer;
+    }
+  }
+}
