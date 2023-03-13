@@ -29,3 +29,11 @@ export const TextoGrande = styled.p`
   line-height: 94px;
   margin-bottom: 24px;
 `;
+
+export const MensagemErro = styled.p`
+  color: red;
+  position: absolute;
+  bottom: 80px;
+  opacity: .7;
+  left: ${margem};
+`
