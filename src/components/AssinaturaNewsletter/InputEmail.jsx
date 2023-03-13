@@ -12,13 +12,14 @@ const InputDiv = styled.div`
   position: relative;
   width: 585px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
 `;
 
 const CampoInput = styled.input`
   border: none;
   width: 100%;
   font-family: $fonte-1;
-  padding: 27px 358px 27px 55px;
+  padding: 27px 230px 27px 55px;
   line-height: 20px;
   opacity: 0.3;
   font-size: 16px;
@@ -46,14 +47,17 @@ const BotaoInput = styled.button`
   }
 `;
 
-export default function InputEmail({children}) {
+export default function InputEmail({value, onChange, onFocus, required, children}) {
   return (
     <InputDiv>
         <Mail />
         <CampoInput
-          type='email'
+          type='text'
           placeholder='Insira seu e-mail'
-          required
+          value={value}
+          onChange={onChange}
+          required={required}
+          onFocus={onFocus}
         />
         <BotaoInput>
           {children}
