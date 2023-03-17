@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import * as variaveis from '@/styles/variaveis.jsx';
-
-const { margem, fonte2 } = variaveis;
+import { margem, fonte2 } from '@/styles/variaveis.jsx';
 
 export const AssinaturaNewsletterForm = styled.form`
   padding: 0 ${margem};
@@ -26,7 +24,6 @@ export const TextoGrande = styled.p`
   font-family: ${fonte2};
   font-weight: 900;
   font-size: 82px;
-  max-width: 375px;
   line-height: 94px;
   margin-bottom: 24px;
 `;

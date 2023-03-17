@@ -1,6 +1,6 @@
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import React from 'react';
-import * as styledComponents from './styled.jsx';
+import { Separador, Cabecalho, LinkDaLista, ListaLinks } from './styled.jsx';
 
 const links = [
   {
@@ -25,8 +25,6 @@ const links = [
   },
 ];
 
-const {Separador, Cabecalho, LinkDaLista, ListaLinks} = styledComponents;
-
 export default function Menu() {
   return (
     <Cabecalho>
@@ -35,9 +33,7 @@ export default function Menu() {
         {links.map((item, index) => (
           <React.Fragment key={index}>
             <LinkDaLista>
-              <a href={item.link}>
-                {item.texto}
-              </a>
+              <a href={item.link}>{item.texto}</a>
             </LinkDaLista>
             {index !== links.length - 1 && <Separador />}
           </React.Fragment>
