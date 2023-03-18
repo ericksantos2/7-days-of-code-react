@@ -1,4 +1,4 @@
-export const casoNaoFor = [
+const casoNaoFor = [
   {
     "name": "Ajuga Reptans",
     "preco": 20,
@@ -36,3 +36,5 @@ export const casoNaoFor = [
     "ordem": 2
   }
 ]
+
+export default casoNaoFor;
