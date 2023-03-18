@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { TextoGrande, TextoInicio } from '../AssinaturaNewsletter/styled';
 import Selecionador from '../Selecionador';
+import casoNaoFor from './casoNaoFor';
 import {
   CardOferta,
   OfertaPreco,
@@ -10,8 +11,13 @@ import {
 } from './styled';
 
 async function conectaApi() {
-  const itens = await fetch('http://127.0.0.1:3000/ofertas');
-  return itens.json();
+  try {
+    let itens = await fetch('http://127.0.0.1:3000/ofertas');
+    return itens.json();
+  } catch (erro) {
+    let itens = [...casoNaoFor];
+    return itens;
+  }
 }
 
 const listaOfertas = await conectaApi();
