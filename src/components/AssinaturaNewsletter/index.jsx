@@ -29,6 +29,13 @@ export default function AssinaturaNewsletter() {
     setSucesso(emailMensagem);
   }
 
+  useEffect(() => {
+    if (sucesso !== '') {
+      alert(`Obrigado pela sua assinatura, você receberá nossas \nnovidades no e-mail ${sucesso}`)
+    }
+    setSucesso('')
+  }, [sucesso])
+
   return (
     <AssinaturaNewsletterForm onSubmit={handleSubmit}>
       <TextoInicio>Sua casa com as</TextoInicio>
@@ -41,7 +48,6 @@ export default function AssinaturaNewsletter() {
       <InputEmail erro={erro} value={email} onChange={(evento) => setEmail(evento.target.value)}>
           Assinar newsletter
       </InputEmail>
-      {sucesso && <MensagemSucesso onClick={() => setSucesso('')}>Obrigado pela sua assinatura, você receberá nossas<br/> novidades no e-mail {sucesso}</MensagemSucesso>}
     </AssinaturaNewsletterForm>
   );
 }
