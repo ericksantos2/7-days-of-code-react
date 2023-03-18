@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as MailSvg } from '@/assets/mail.svg';
+import { margem } from '../../styles/variaveis';
 
 const Mail = styled(MailSvg)`
   position: absolute;
@@ -43,25 +44,38 @@ const BotaoInput = styled.button`
   &:hover {
     cursor: pointer;
     transition: 500ms;
-    opacity: .5;
+    opacity: 0.5;
   }
 `;
 
-export default function InputEmail({value, onChange, onFocus, required, children}) {
+export const MensagemErro = styled.p`
+  color: red;
+  position: absolute;
+  top: -22px;
+  opacity: 0.7;
+`;
+
+export default function InputEmail({
+  value,
+  onChange,
+  onFocus,
+  required,
+  erro,
+  children,
+}) {
   return (
     <InputDiv>
-        <Mail />
-        <CampoInput
-          type='text'
-          placeholder='Insira seu e-mail'
-          value={value}
-          onChange={onChange}
-          required={required}
-          onFocus={onFocus}
-        />
-        <BotaoInput>
-          {children}
-        </BotaoInput>
-      </InputDiv>
-  )
+      {erro !== '' && <MensagemErro>{erro}</MensagemErro>}
+      <Mail />
+      <CampoInput
+        type='text'
+        placeholder='Insira seu e-mail'
+        value={value}
+        onChange={onChange}
+        required={required}
+        onFocus={onFocus}
+      />
+      <BotaoInput>{children}</BotaoInput>
+    </InputDiv>
+  );
 }

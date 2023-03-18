@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import InputEmail from './InputEmail';
 import MensagemSucesso from './MensagemSucesso';
-import {AssinaturaNewsletterForm, Texto, TextoInicio, TextoGrande, MensagemErro} from './styled';
+import {AssinaturaNewsletterForm, Texto, TextoInicio, TextoGrande} from './styled';
 
 export default function AssinaturaNewsletter() {
 
@@ -38,8 +38,7 @@ export default function AssinaturaNewsletter() {
         torná-lo uma pessoa mais feliz no seu dia a dia. <br/>Entre com seu e-mail e
         assine nossa newsletter para saber <br/>das novidades da marca.
       </Texto>
-      {erro !== '' && <MensagemErro>{erro}</MensagemErro>}
-      <InputEmail value={email} onChange={(evento) => setEmail(evento.target.value)}>
+      <InputEmail erro={erro} value={email} onChange={(evento) => setEmail(evento.target.value)}>
           Assinar newsletter
       </InputEmail>
       {sucesso && <MensagemSucesso onClick={() => setSucesso('')}>Obrigado pela sua assinatura, você receberá nossas<br/> novidades no e-mail {sucesso}</MensagemSucesso>}
