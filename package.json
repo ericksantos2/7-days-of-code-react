@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "host": "vite --host",
     "server": "json-server ofertas.json",
-    "start": " npm run server & npm run dev"
+    "start": " npm run dev & npm run server"
   },
   "dependencies": {
     "json-server": "^0.17.2",
