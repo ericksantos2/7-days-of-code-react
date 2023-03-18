@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <Background />
       <Menu />
-      <main style={{ marginTop: '150px', opacity: 0.999999 }}>
+      <main style={{ marginTop: '150px' }}>
         <AssinaturaNewsletter />
         <Card />
         <Ofertas />
