@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ReactComponent as MailSvg } from '@/assets/mail.svg';
-import { margem } from '../../styles/variaveis';
 
 const Mail = styled(MailSvg)`
   position: absolute;
