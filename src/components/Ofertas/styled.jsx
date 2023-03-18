@@ -10,6 +10,7 @@ export const OfertasDiv = styled.div`
   padding: 0 ${margem} 153px ${margem};
   text-align: center;
   position: relative;
+  min-height: 569px;
 `;
 
 export const OfertasDivCards = styled.div`
