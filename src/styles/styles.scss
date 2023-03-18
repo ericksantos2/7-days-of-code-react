@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat&display=swap');
+
+$fonte-1: 'Montserrat', sans-serif;
+
+body {
+  font-family: $fonte-1;
+  color: #202020;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+}
+
+.inselecionavel {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
