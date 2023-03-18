@@ -12,8 +12,9 @@ import {
 
 async function conectaApi() {
   try {
-    let itens = await fetch('http://127.0.0.1:3000/ofertas');
-    return itens.json();
+    let itens = await fetch('https://raw.githubusercontent.com/ericksantos2/7-days-of-code-react/dia-7/ofertas.json');
+    itens = await itens.json();
+    return itens.ofertas;
   } catch (erro) {
     let itens = [...casoNaoFor];
     return itens;
