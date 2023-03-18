@@ -9,6 +9,7 @@ import { fonte1 } from '../../styles/variaveis';
 export const OfertasDiv = styled.div`
   padding: 0 ${margem} 153px ${margem};
   text-align: center;
+  position: relative;
 `;
 
 export const OfertasDivCards = styled.div`
