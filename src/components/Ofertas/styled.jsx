@@ -10,13 +10,13 @@ export const OfertasDiv = styled.div`
   padding: 0 ${margem} 153px ${margem};
   text-align: center;
   position: relative;
-  min-height: 569px;
 `;
 
 export const OfertasDivCards = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 31px;
+  min-height: ${props => props.alturaMinima}px;
 `;
 
 export const OfertaTexto = styled(TextoGrande)`

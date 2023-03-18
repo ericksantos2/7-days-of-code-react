@@ -62,11 +62,13 @@ export default function Ofertas() {
     handleFiltro();
   }, [filtro]);
 
+  let quantidadeFileiras = Math.ceil(listaOfertas.length / 3);
+
   return (
     <OfertasDiv>
       <TextoInicio>Conheça nossas</TextoInicio>
       <TextoGrande style={{ marginBottom: '5px' }}>plantas</TextoGrande>
-      <OfertasDivCards>
+      <OfertasDivCards alturaMinima={(quantidadeFileiras * 200) + ((quantidadeFileiras - 1) * 31)}> {/* a altura minima é a quantidade de fileiras multiplicada pela altura de cada card + a tamanho dos gaps, que é o tamanho de cada gap multiplicada pela quantidade de fileiras - 1 (a ultima não tem gap)*/}
         {ofertas.map((item, index) => (
           <CardOferta
             imagem={item.img}
