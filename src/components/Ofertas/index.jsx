@@ -20,7 +20,7 @@ export default function Ofertas() {
   return (
     <OfertasDiv>
       <TextoInicio>Conheça nossas</TextoInicio>
-      <TextoGrande style={{ marginBottom: '5px' }}>ofertas</TextoGrande>
+      <TextoGrande style={{ marginBottom: '5px' }}>plantas</TextoGrande>
       <OfertasDivCards>
         {listaOfertas.map((item, index) => (
           <CardOferta imagem={item.img} key={index} botaoDesabilitado={item.ordem === 0}>
