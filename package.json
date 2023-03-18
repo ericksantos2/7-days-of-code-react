@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "host": "vite --host"
+    "host": "vite --host",
+    "server": "json-server ofertas.json",
+    "start": " npm run server & npm run dev"
   },
   "dependencies": {
+    "json-server": "^0.17.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reset.css": "^2.0.2",
